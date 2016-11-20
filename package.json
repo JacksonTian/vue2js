@@ -1,0 +1,17 @@
+{
+  "name": "vue2js",
+  "version": "1.0.0",
+  "description": "Compile a single Vue file to JavaScript file",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vue2js": "./bin/vue2js"
+  },
+  "author": "Jackson Tian",
+  "license": "MIT",
+  "files": [
+    "lib", "bin"
+  ]
+}

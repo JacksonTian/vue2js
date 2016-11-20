@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var argv = process.argv.slice(2);
+var filename = argv[0];
+if (!filename) {
+  console.error('Usage: vue2js <filename>');
+  process.exit(-1);
+}
+
+const path = require('path');
+const fs = require('fs');
+
+const Parser = require('../').Parser;
+const Builder = require('../').Builder;
+
+var filepath = path.resolve(filename);
+var readable = fs.createReadStream(filepath, 'utf8');
+
+var parser = new Parser();
+
+readable.on('data', (chunk) => {
+  parser.exec(chunk);
+});
+
+readable.on('end', () => {
+  var builder = new Builder(parser.results);
+  builder.build();
+  var output = builder.output.join('\n\n');
+  console.log(output);
+});
