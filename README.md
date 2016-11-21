@@ -11,7 +11,6 @@ The `.vue` means use [.vue Spec file](https://vue-loader.vuejs.org/en/start/spec
 
 ```sh
 $ npm i vue2js -g
-
 ```
 
 ## Usage

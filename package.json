@@ -12,6 +12,19 @@
   "author": "Jackson Tian",
   "license": "MIT",
   "files": [
-    "lib", "bin"
-  ]
+    "lib",
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonTian/vue2js.git"
+  },
+  "keywords": [
+    "Vue",
+    "Component"
+  ],
+  "bugs": {
+    "url": "https://github.com/JacksonTian/vue2js/issues"
+  },
+  "homepage": "https://github.com/JacksonTian/vue2js#readme"
 }
